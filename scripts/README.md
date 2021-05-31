@@ -32,7 +32,7 @@ Run the `get-flatcar` script to download Flatcar Linux images, verify them, and 
 This will create:
 
 ```
-examples/assets/flatcar/
+examples/assets/flatcar/current/
 └── 2605.6.0
     ├── Flatcar_Image_Signing_Key.asc
     ├── flatcar_production_image.bin.bz2

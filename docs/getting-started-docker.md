@@ -38,9 +38,9 @@ For development convenience, add `/etc/hosts` entries for nodes so they may be r
 ```sh
 # /etc/hosts
 ...
-172.17.0.21 node1.example.com
-172.17.0.22 node2.example.com
-172.17.0.23 node3.example.com
+172.18.0.21 node1.example.com
+172.18.0.22 node2.example.com
+172.18.0.23 node3.example.com
 ```
 
 ## Containers

@@ -183,7 +183,7 @@ Export `SAN` to set the Subject Alt Names which should be used in certificates. 
 
 ```sh
 # DNS or IP Subject Alt Names where matchbox runs
-$ export SAN=DNS.1:matchbox.example.com,IP.1:172.17.0.2
+$ export SAN=DNS.1:matchbox.example.com,IP.1:172.18.0.2
 ```
 
 Generate a `ca.crt`, `server.crt`, `server.key`, `client.crt`, and `client.key`.
@@ -261,7 +261,7 @@ Move the images to `/var/lib/matchbox/assets`,
 ├── fedora-coreos-32.20200923.3.0-metal.x86_64.raw.xz
 └── fedora-coreos-32.20200923.3.0-metal.x86_64.raw.xz.sig
 
-/var/lib/matchbox/assets/flatcar/
+/var/lib/matchbox/assets/flatcar/current/
 └── 2605.6.0
     ├── Flatcar_Image_Signing_Key.asc
     ├── flatcar_production_image.bin.bz2
