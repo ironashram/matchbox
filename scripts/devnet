@@ -79,6 +79,7 @@ function docker_create {
     DATA_MOUNT=""
   else
     # Mount the given EXAMPLE
+    MATCHBOX_ARGS="-rpc-address=0.0.0.0:8081"
     DATA_MOUNT="-v $PWD/examples:/var/lib/matchbox:Z -v $DIR/../examples/groups/$EXAMPLE:/var/lib/matchbox/groups:Z"
   fi
 

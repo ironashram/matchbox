@@ -30,13 +30,8 @@ storage:
           udevadm settle
           systemctl reboot
 
-{{ if index . "ssh_authorized_keys" }}
 passwd:
   users:
     - name: core
       ssh_authorized_keys:
-        {{ range $element := .ssh_authorized_keys }}
-        - {{$element}}
-        {{end}}
-{{end}}
-
+        - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDzb7NOUHJ9vTpW84vfhHF1PEiGLgAo+PV2l+MJCJpsR5oZIVJ8BHWibWCieh4pBpov9CeYIfLZ+csk+cYuAPLalaIfMFvQ5j5CB3gRBvoNWv9iZOd8kfI2xBGMsfYO5oODpeIVNY+K5HcRLUHrnESoPgWHMgM9Cx1oBVozzk74bbUVCOSzmAqkf3Y5zY5sdLTycN+QH53ZNdK5FE0YyDBn8skuWZWJXcfHTeG7xHloyEnMOflYJ70NfV11Q8qZplUIYPmBB4M3jkQk1Aoi3foOVkijmJy7QWe6rED+RiE4BpWAPStAt6l9oJBCa5dO/DeB4zgw6Lj1Gda/CUaG5F6p9V8Q255DmZyuBEv9Dt9TNdVEvu+zdSeT2nTk/oCU+xXP/zClugJ04m4LR4KnAiC53oJd7crsgjK1ptoetIfgTwmyOC94B9hY7UsQ2nLTCaiHwXtI/4/88MErkfxHhivDe2KRIf7hUGzqOOFQeJpjxbM2M0LL+MSQpSwOmG0Y6BU9SuqUFONo2znKD+dXMj+MlVOUS8JVAqfnNci/uOM7M71arx1YrO6WygRVHuwsF59vYxuZT3b0mGgTTa4pPNn7tWEWZETzmNFNVPUoxJS3LRZdsuQLtXwznWEX44Ngw1EvpbNYY9Ny6pVNXsAmxw0oZfhneUHghzXGxRuB94pwow== sysdadmin@m1k.cloud"
